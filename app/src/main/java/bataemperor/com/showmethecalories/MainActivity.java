@@ -19,6 +19,7 @@ import clarifai2.dto.input.image.ClarifaiImage;
 import clarifai2.dto.model.ConceptModel;
 import clarifai2.dto.model.output.ClarifaiOutput;
 import clarifai2.dto.prediction.Concept;
+import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
     public static final int IMAGE = 300;
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         iv = (ImageView) findViewById(R.id.ivImage);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.nutritionix.com/v1_1/")
+                .build();
     }
 
     public void pickImage(View view) {
