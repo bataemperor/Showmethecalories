@@ -1,6 +1,7 @@
 package bataemperor.com.showmethecalories.adapter;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,11 +38,29 @@ public class CaloriesAdapter extends RecyclerView.Adapter<CaloriesAdapter.Calori
         FoodWrapper foodWrapper = items.get(position);
         holder.tvFood.setText(String.valueOf(foodWrapper.getFood()));
         holder.tvCal.setText(String.valueOf(foodWrapper.getCalorie()));
+        if (position == 0) {
+            holder.tvCal.setTypeface(null, Typeface.BOLD);
+            holder.tvFood.setTypeface(null, Typeface.BOLD);
+        } else {
+            holder.tvCal.setTypeface(null, Typeface.NORMAL);
+            holder.tvFood.setTypeface(null, Typeface.NORMAL);
+        }
     }
 
     @Override
     public int getItemCount() {
         return items.size();
+    }
+
+    public void clear() {
+        items.clear();
+        notifyDataSetChanged();
+    }
+
+    public void addList(List<FoodWrapper> list) {
+        items.clear();
+        items.addAll(list);
+        notifyDataSetChanged();
     }
 
     public class CaloriesHolder extends RecyclerView.ViewHolder {

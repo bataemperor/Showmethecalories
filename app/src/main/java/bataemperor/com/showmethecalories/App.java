@@ -14,16 +14,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class App extends Application {
     private static App instance;
-    private ClarifaiClient clarifaiClient;
     private Retrofit retrofit;
 
     @Override
     public void onCreate() {
         super.onCreate();
         instance = this;
-        clarifaiClient = new ClarifaiBuilder("QdnCcIurkcUp_ECPBECUWAPG9koTBU5SYVS3CDtC", "4LS-ewqJI1A2MPwGeAmN4yXhGXN_q5tus6FTHx_H")
-                .buildSync();
-        super.onCreate();
 
         retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.nutritionix.com/v1_1/")
@@ -35,12 +31,6 @@ public class App extends Application {
         return instance;
     }
 
-    public ClarifaiClient clarifaiClient() {
-        if (clarifaiClient == null) {
-            throw new IllegalStateException("Cannot use Clarifai client before initialized");
-        }
-        return clarifaiClient;
-    }
 
     public Retrofit getRetrofit() {
         if (retrofit == null) {

@@ -10,13 +10,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="Banana"
+        android:text="Food"
         android:textSize="20sp" />
 
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
-        android:background="#211f1f" />
+        android:background="#c9c3c3" />
 
     <TextView
         android:id="@+id/tvCalorie"
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="30kj"
+        android:text="Calories"
         android:textSize="20sp" />
+
 </LinearLayout>

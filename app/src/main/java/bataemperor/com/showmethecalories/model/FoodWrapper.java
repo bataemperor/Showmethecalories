@@ -6,7 +6,7 @@ package bataemperor.com.showmethecalories.model;
 
 public class FoodWrapper {
     private String food;
-    private double calorie;
+    private String calorie;
 
     public String getFood() {
         return food;
@@ -16,14 +16,19 @@ public class FoodWrapper {
         this.food = food;
     }
 
-    public double getCalorie() {
+    public String getCalorie() {
         return calorie;
     }
 
-    public void setCalorie(double calorie) {
+    public void setCalorie(String calorie) {
         this.calorie = calorie;
     }
 
     public FoodWrapper() {
+    }
+
+    public FoodWrapper(String food, String calorie) {
+        this.food = food;
+        this.calorie = calorie;
     }
 }
