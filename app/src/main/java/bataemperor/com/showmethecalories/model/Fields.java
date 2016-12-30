@@ -1,4 +1,4 @@
-package bataemperor.com.showmethecalories.retrofit.model;
+package bataemperor.com.showmethecalories.model;
 
 /**
  * Created by aleksandar on 29.12.16..

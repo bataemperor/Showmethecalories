@@ -1,4 +1,4 @@
-package bataemperor.com.showmethecalories.retrofit.model;
+package bataemperor.com.showmethecalories.model;
 
 /**
  * Created by aleksandar on 29.12.16..
@@ -7,7 +7,7 @@ package bataemperor.com.showmethecalories.retrofit.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Item {
+public class Hit {
 
     @SerializedName("_index")
     @Expose
